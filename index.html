@@ -22,14 +22,19 @@
         <link href="botcomp.css" rel="stylesheet"/>
         <style>
             .btn-success{
-                background-color: rgb(42, 133, 22);
+                background-color: #2a8516;
 
             }
 .btn-dark{
-    background-color: rgb(10, 52, 10);
+    background-color: rgb(17, 58, 5);
 }
 .btn-light{
     background-color: rgb(72, 107, 18);
+}
+.text-success{
+    
+    -webkit-text-fill-color: #032408;
+    
 }
         </style>
     </head>
@@ -43,8 +48,8 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#acerca">Acerca de nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">¡Contáctanos!</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#coment">Comentarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">¡Contáctanos!</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Otros servicios</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +60,31 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                         <div class="text-center my-5">
-                            <h1 class="display-5 fw-bolder text-white mb-2" style="font-size:80px;">BOT CÓMPLICE</h1>
+                            <canvas id="myCanvas" width="600" height="150" ></canvas>
+
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+
+ctx.font = "70px Arial";
+
+
+
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("0.9", "#1b6e27");
+gradient.addColorStop("0", "#032408");
+
+gradient.addColorStop("0.5", "#58bd29");
+gradient.addColorStop("0.3", "#b8fa99");
+gradient.addColorStop("0", "white")
+
+// Fill with gradient
+ctx.fillStyle = gradient;
+ctx.fillText("BOT COMPLICE", 35, 130);
+</script>
+                       
                             <h5 class="display- fw-bolder text-white mb-2" style="font-size: 27px;">"Su asistente virtual de servicios en línea".</h3>
                             <p class="lead text-white-50 mb-4">¡Atención rápida, sencilla, eficaz y amena para nuestros usuarios!</p>
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
@@ -73,7 +102,7 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 mb-5 mb-lg-0">
 
-                        <div class="feature btn-success bg-gradient text-white rounded-3 mb-3" align="center"><i class="bi bi-phone" align="center" ></i></div>
+                        <div class="feature btn-success bg-gradient text-white rounded-3 mb-3" align-items-center><i class="bi bi-phone" ></i></div>
                         <h2 class="h4 fw-bolder">Acceso fácil y directo desde tu celular.</h2>
                         <p>Solo debes  presionar el link o enviar un mensaje y contactarás al Bot automáticamente.</p>
                         <a class="text-success" href="https://chat.whatsapp.com/IGhChE1iUkUCQ3j9tDCho8">
@@ -82,14 +111,14 @@
                         </a>
                     </div>
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <div class="feature btn-success bg-gradient text-white rounded-3 mb-3" align="center"><i class="bi bi-chat-left-text-fill" align="center"></i></div>
+                        <div class="feature btn-success bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-left-text-fill"></i></div>
                         <h2 class="h4 fw-bolder">Respuestas rápidas, seguras y confiables.</h2>
                         <p>Solo dile tus peticiones, tus dudas o necesidades y tendrás respuestas de la mejor manera.</p>
 
                     </div>
                     <div class="col-lg-4">
-                        <div class="feature btn-success bg-gradient text-white rounded-3 square mb-3" align="center"><i class="bi bi-graph-up" align="center"></i></div>
-                        <h2 class="h4 fw-bolder" >Innovación, accesibilidad y evolución.</h2>
+                        <div class="feature btn-success bg-gradient text-white rounded-3 mb-3"><i class="bi bi-graph-up"></i></div>
+                        <h2 class="h4 fw-bolder">Innovación, accesibilidad y evolución.</h2>
                         <p>Por un futuro mejor y más eficiente.</p>
                        
                     </div>
@@ -195,7 +224,7 @@
                     </div>
         </section>
         <!-- Testimonials section-->
-        <section class="py-5 border-bottom" id="contact">
+        <section class="py-5 border-bottom">
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
                     <h2 class="fw-bolder">Quienes forman parte del proyecto</h2>
@@ -210,8 +239,7 @@
                                     <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-success fs-1"></i></div>
                                     <div class="ms-4">
                                         <p class="mb-1">Solo quiero ser el mejor programando y con este proyecto espero conseguir suficiente experiencia para seguir adelante.</p>
-                                        <div class="small text-muted">- Cristian Casanova, Mocoa</div><pre><div class=" text-muted"> 3222268025 </div></pre>
-                                        
+                                        <div class="small text-muted">- Cristian Casanova, Mocoa</div>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +252,6 @@
                                     <div class="ms-4">
                                         <p class="mb-1">Mejorar tu servicio, brindar más oportunidades, crecer exponencialmente tu negocio es lo que queremos hacer contigo🤗!👍🏽</p>
                                         <div class="small text-muted">- Esteban Pantoja, Villagarzón</div>
-                                        <pre><div class=" text-muted"> 3168858161 </div></pre>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +263,6 @@
                                     <div class="ms-4">
                                         <p class="mb-1">Es un proyecto hecho con amor y con el mayor esfuerzo para dar lo mejor a los establecimientos qué confien en nosotros</p>
                                         <div class="small text-muted">- Nicolás Salas, Mocoa</div>
-                                        <pre><div class=" text-muted"> 3138467773 </div></pre>
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +275,6 @@
                                     <div class="ms-4">
                                         <p class="mb-1">¡Tú puedes ser lo que quieras ser!</p>
                                         <div class="small text-muted">- Felipe Anacona, Mocoa</div>
-                                        <pre><div class=" text-muted"> 3105791856 </div></pre>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +286,6 @@
                                     <div class="ms-4">
                                         <p class="mb-1">Espero con ansías ver como genera frutos este proyecto, vale la pena quemarse las pestañas por esto!</p>
                                         <div class="small text-muted">- Romer Almeida, Portuguesa</div>
-                                        <pre><div class=" text-muted"> 3124448768 </div></pre>
                                     </div>
                                 </div>
                             </div>
@@ -273,7 +297,6 @@
                                     <div class="ms-4">
                                         <p class="mb-1">Todo será más fácil con BOT COMPLICE!</p>
                                         <div class="small text-muted">- Juan Santander, Mocoa</div>
-                                        <pre><div class=" text-muted"> 3117061810 </div></pre>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +307,7 @@
             </div>
         </section>
         <!-- Contact section-->
-        <section class="bg-light py-5" id="coment">
+        <section class="bg-light py-5">
             <div class="container px-5 my-5 px-5">
                 <div class="text-center mb-5">
                     <div class="feature btn-success bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
