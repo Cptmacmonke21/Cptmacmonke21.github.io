@@ -1,28 +1,94 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <link rel="icon" href="https://as1.ftcdn.net/v2/jpg/02/97/39/08/1000_F_297390834_Cxe5r8ttljrcQoHABJ25MyP7iz1e4HY6.jpg">
-  <title>El taller más largo del mundo by ROMER ALMEIDA</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" href="https://as1.ftcdn.net/v2/jpg/02/97/39/08/1000_F_297390834_Cxe5r8ttljrcQoHABJ25MyP7iz1e4HY6.jpg">
+<title>El taller más largo del mundo by ROMER ALMEIDA</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://unpkg.com/scrollreveal@4.3.3/dist/scrollreveal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Bootstrap CSS v5.2.1 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-</head>
 
-<script src="ROMER_ALMEIDA.js"></script>
+
 <body>
    <style>
+.box {
+  display: flex;
+  width: 100%;
+}
+
+.box-sm {
+  height: 8px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all .8s ease-in-out;
+  cursor: pointer;
+}
+.box-sm:hover {
+  flex-grow: 12;
+}
+
+.contain,
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contain {
+  height: 100%;
+  margin: 20px;
+  padding: 20px;
+  outline: 1px dashed #98abb9;
+  outline-offset: -5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3), 0 2px 2px rgba(0, 0, 0, .2), 0 4px 4px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .1);
+}
+
+.post {
+  margin-bottom: 50px;
+  h2,
+  p {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  h2 {
+    font-size: 60px;
+    color: #E0E0E0;
+    text-shadow: 0px 1px 1px black;
+  }
+}
+
+.red {
+  background-color: #FF5852;
+}
+
+.orange {
+  background-color: #FF9000;
+}
+
+.yellow {
+  background-color: #FFD300;
+}
+
+.green {
+  background-color: #3DCD49;
+}
+
+.blue {
+  background-color: #0089D7;
+}
+
+.purple {
+  background-color: #9E44C4;
+}
+
     .bg-purple{
-        background: rgba(128, 0, 128, 0.705);
+        background: rgba(127, 22, 127, 0.755);
     }
-    .navbar-nav .nav-link:hover {
+    .navbar-nav  .nav-link:hover{
             color: white;
         }
         .a-margin{
@@ -46,7 +112,7 @@
 }
 
 .navbar a {
-    text-decoration: none;
+    text-decoration:none;
     margin: 0 20px;
 }
 
@@ -134,11 +200,21 @@ background-color: #9ed3ff;
     .margen-5{
         margin-top: 90px ;
     }
+    .mg-top{
+        margin-top: 50px;
+       
+    }
+    .mg-bot{
+        margin-bottom: 70%;
+    }
    </style>
   <header>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-purple ">
         <div class="container">
-            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand nav-link" href="#">
+                <i class="bi bi-binoculars-fill" style="font-size: 2em; color: #007bff;"></i>
+                Inicio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -184,121 +260,150 @@ background-color: #9ed3ff;
             </div>
         </div>
     </nav>  </header>    
-  <main id="seccion1">
-<div class="row justify-content-center align-items-center g-2 b-bgcolor sr">
-    <div class="col-2 a-margin " > <div col>
-        <div class="mb-3" >
-         <p></p>
-         <h1><b>Contador de Palabras Únicas</b></h1>
-         <form id="form">
-             <label for="parrafo"></label>
-             <div class="mb-3">
-               <input type="text"
-                 class="form-control"  id="parrafo"  placeholder="Ingrese un párrafo">
-                 <small class="text-muted" style="font-family:cursive;">"Al iniciar presione el botón 2 veces"</small>
-             </div>
-             
-           
+
+
+
+
+            <main id="seccion1">
+            <div class="row justify-content-center align-items-center g-2 b-bgcolor sr">
+            <div class="col-2 a-margin " > <div col>
+            <div class="mb-3" >
+            <p></p>
+            <h1><b>Contador de Palabras Únicas</b></h1>
+            <form id="form">
+            <label for="parrafo"></label>
+            <div class="mb-3">
+            <input type="text"
+            class="form-control"  id="parrafo"  placeholder="Ingrese un párrafo">
+            <small class="text-muted" style="font-family:cursive;">"Al iniciar presione el botón 2 veces"</small>
+            </div>
             </form>
-          
             <button onclick="contar()" id="contarBtn" class="btn btn-dark" type="button" value="">Contar palabras</button>
-        </div></div>
-       </div>
-    <div class="col">
-        <div id="words" style="font-size: 200%;"></div>
+            </div></div>
+            </div>
+            <div class="col">
+            <div id="words" style="font-size: 200%;"></div>
 
 </div>
-    <div class="col">
-        <img src="https://www.unila.edu.mx/wp-content/uploads/2022/02/que-hace-un-contador1-2048x1365.jpg" width="600px" height="350px" alt="es un contador de palabras papu"> 
-    </div>
+<div class="col">
+<img src="https://www.unila.edu.mx/wp-content/uploads/2022/02/que-hace-un-contador1-2048x1365.jpg" width="600px" height="350px" alt="es un contador de palabras papu"> 
 </div>
-    <small class="text-muted"></small>
+</div>
+<small class="text-muted"></small>
 
 
-   <hr>
-
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
     <div class="bh-color" id="seccion2">
     <div class="row justify-content-center align-items-center bg-contra g-2 sr" >
         <div class="col goofy-a">
             <h1>Ingrese una contraseña segura</h1>
             <div class="mb-2">
-    <input class="form-control px-4" type="password" id="password" placeholder="Ingrese su contraseña"></div>
+            <input class="form-control px-4" type="password" id="password" placeholder="Ingrese su contraseña"></div>
     
-    <button type="submit" class="btn btn-primary" onclick="entrar()" style="font-family: Arial, Helvetica, sans-serif;">Entrar</button>
-
-
-
-        </div>
-        <div class="col">
-            <div class="">
-
+            <button type="submit" class="btn btn-primary" onclick="entrar()" style="font-family: Arial, Helvetica, sans-serif;">Entrar</button>
             </div>
-           <img src="https://i.blogs.es/84470e/wifi-password-57f560ef5f9b586c359127f9/1366_2000.webp" alt="señacontra jeje" width="400">
-        </div>
+
+            <div class="col">
+            <div class="">
+            </div>
+            <img src="https://i.blogs.es/84470e/wifi-password-57f560ef5f9b586c359127f9/1366_2000.webp" alt="señacontra jeje" width="400">
+            </div>
+
         <div class="col">
-            
-            <p id="mensajeError" style="font-size: 35px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: red;">
-            <b></b></p>
+        <p id="mensajeError" style="font-size: 35px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: red;">
+        <b></b></p>
         </div>
-    </div></div>
+        </div></div>
 
-
-<hr>
-
-
-
-
-<div>
-<div class="row justify-content-center align-items-center g-2 bg-anag sr"  id="seccion3">
-    <div class="col-3 margen-2">
-        <h1 class="justify-content-center"><b>Anagramas</b></h1>
-        <div class="">
-            <label for="cadena1"></label>
-            <input type="text" id="cadena1" class="form-control" placeholder="Ingresa la primera cadena">
+        <div class="box">
+            <div class="box-sm red"></div>
+            <div class="box-sm orange"></div>
+            <div class="box-sm yellow "></div>
+            <div class="box-sm green "></div>
+            <div class="box-sm blue "></div>
+            <div class="box-sm purple"></div>
         </div>
-        <br>
-        <button class="btn btn-outline-dark" onclick="inspeccionar()">Inspeccionar</button>
-    </div>
-    <div class="col-3">
-        <div class="mb-3">
-            <label for="cadena2"></label>
-            <input type="text" id="cadena2" class="form-control" placeholder="Ingresa la segunda cadena">
         </div>
-    </div>
-         <div class="col-4 justify-content-end">
-             <p id="resultado" style="font-size: 40px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></p>
-         </div>
+
+<div class="row justify-content-center align-items-center g-2 bg-anag sr "  id="seccion3">
+<div class="col-3 margen-3">
+<h1 class="justify-content-center"><b>Anagramas</b></h1>
+<div class="">
+<label for="cadena1"></label>
+<input type="text" id="cadena1" class="form-control" placeholder="Ingresa la primera cadena">
+</div>
+<br>
+<button class="btn btn-outline-dark" onclick="inspeccionar()">Inspeccionar</button>
+</div>
+
+<div class="col-3">
+<div class="mb-3">
+<label for="cadena2"></label>
+<input type="text" id="cadena2" class="form-control" placeholder="Ingresa la segunda cadena">
+</div>
+</div>
+
+<div class="col-4 justify-content-end">
+<p id="resultado" style="font-size: 40px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"></p>
+</div>
 </div >
 
-
-<hr id="seccion4">
-
-<div class="row justify-content-center  align-items-center g-2 bg-vocals sr" ><pre>
-    <h1 style="font-family: Arial, Helvetica, sans-serif;"><b >            Reemplazo de Vocales</b></h1></pre>
-    <div class="col-2 margen-2" >
-        <div class="mb-3"><input type="text" id="cadena" class="form-control" placeholder="Ingresa un texto">
-    </div></div>
-    <div class="col-2">
-        <div class="mb-4">
-        <label for="caracter"></label>
-    <input type="text" id="caracter" class="form-control" placeholder="Carácter de reemplazo">
-    <br></div>
-    </div>
-    <div class="col-3">
-        <div class="mb-4">
-        <button class="btn btn-outline-warning" onclick="chngV()">Reemplazar</button></div></div>
-    <div class="col-3">
-        <p id="reemplazo" style="font-size:40px; font-weight: 700;"></p>
-    </div>
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
 </div>
-<hr>
+</div>
+
+<div class="row justify-content-center  align-items-center g-2 bg-vocals sr" >
+<h1 style="font-family: Arial, Helvetica, sans-serif;" class="margen-1 mg-top"><b >Reemplazo de Vocales</b></h1>
+<div class="col-2 " id="seccion4">
+<div class="mb-3 mg-top mg-bot">
+<input type="text" id="cadena" class="form-control" placeholder="Ingresa un texto">
+</div></div>
+
+<div class="col-2">
+<div class="mb-3 mg-top mg-bot">
+<label for="caracter"></label>
+<input type="text" id="caracter" class="form-control" placeholder="Carácter de reemplazo">
+<br></div>
+</div>
+
+<div class="col-3">
+<div class="mb-4 mg-top mg-bot">
+<button class="btn btn-outline-warning" onclick="chngV()">Reemplazar</button></div></div>
+<div class="col-3">
+<p id="reemplazo" style="font-size:40px; font-weight: 700;"></p>
+</div>
+</div>
+
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
 
 <div class="row justify-content-center align-items-center g-2 bg-src sr" id="seccion5">
-    <div class="col">
-        <img src="https://josefacchin.com/wp-content/uploads/2019/10/que-es-una-palabra-clave.png.webp" alt="keywords" width="500px" height="350px">
-    </div>
-    <div class="col" style="font-size: 40px;"><p id="search"></p></div>
-    <div class="col">
+<div class="col">
+<img src="https://josefacchin.com/wp-content/uploads/2019/10/que-es-una-palabra-clave.png.webp" alt="keywords" width="500px" height="350px">
+</div>
+        <div class="col" style="font-size: 40px;"><p id="search"></p></div>
+        <div class="col">
         <div class="container">
             <h1><b>Búsqueda en una Cadena</b></h1>
             <label for="strin"></label>
@@ -307,28 +412,48 @@ background-color: #9ed3ff;
             <input type="text" id="Clave" class="form-control" placeholder="Ingresa una palabra clave">
             <br>
             <button class="btn btn-success" onclick="search()">Buscar</button>
-            
-    
-            </div>
-    </div>
 </div>
-<hr>
-<div class="row justify-content-center align-items-center g-2 bg-words sr" id="seccion6">
-    <div class="col">
-        <img src="https://imagenes.elpais.com/resizer/Ke6SbuyEn2KhF5aNLZdJf6RuWZw=/1200x0/filters:focal(2160x1105:2170x1115)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2S7VHBWCY5FQFATR2XFQUWE7X4.jpg" alt="si" width="500px" height="330px">
-    </div>
-    <div class="col">
-        <p id="palabras" style="font-family: fantasy; font-size: 40px;"></p>
-    </div>
-    <div class="col-4 container">
-        <h1>Contador de Palabras</h1>
-        <label for="frase"></label>
-        <input type="text" id="frase" class="form-control" placeholder="Ingrese una frase"> 
+</div>
+</div>
+
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
+
+<div class="row justify-content-center align-items-center g-2 bg-words" id="seccion6">
+<div class="col">
+<img src="https://imagenes.elpais.com/resizer/Ke6SbuyEn2KhF5aNLZdJf6RuWZw=/1200x0/filters:focal(2160x1105:2170x1115)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/2S7VHBWCY5FQFATR2XFQUWE7X4.jpg" alt="si" width="500px" height="330px">
+</div>
+
+<div class="col">
+<p id="palabras" style="font-family: fantasy; font-size: 40px;"></p>
+</div>
+
+<div class="col-4 container">
+<h1>Contador de Palabras</h1>
+<label for="frase"></label>
+<input type="text" id="frase" class="form-control" placeholder="Ingrese una frase"> 
 <p></p>
-         <button class="btn btn-outline-dark" onclick="contador()">Contar</button>
-        </div>
+<button class="btn btn-outline-dark" onclick="contador()">Contar</button>
 </div>
-<hr>
+</div>
+
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
+
 <div class="row justify-content-center align-items-center g-2 bg-inver sr" id="seccion7">
     <div class="col">
         <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/invert-color_P3_720x916?$pjpeg$&jpegSize=200&wid=720" alt="evil-image" width="500" height="500px">
@@ -348,8 +473,18 @@ background-color: #9ed3ff;
     
     </div>
 </div>
-<hr>
-<div class="row justify-content-center align-items-center g-2 bg-fruits sr" id="seccion8">
+
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
+
+<div class="row justify-content-center align-items-center g-2 bg-fruits" id="seccion8">
     <div class="col">
         <img src="https://www.concierto.cl/wp-content/uploads/2013/01/frutas-768x576.jpg" alt="Frutifastantico" width="500px" height="350px">
     </div>
@@ -368,7 +503,18 @@ background-color: #9ed3ff;
 
     </div>
 </div>
-<hr>
+
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
+
+
 <div class="row justify-content-center bg-green  align-items-center sr g-2" id="seccion9">
     <div class="col-4 margen-1">
         <h1><b>Mayúsculas y Minúsculas</b></h1>
@@ -387,7 +533,16 @@ background-color: #9ed3ff;
         <p id="minus" style="font-family: Arial, Helvetica, sans-serif;font-size: 20px; "></p>
     </div>
 </div>
-<hr>
+<div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+</div>
+</div>
+
     <div class="row justify-content-center bg-orange align-items-center g-2">
         <div class="col-3  margen-1" id="seccion10">
             <h1><b>¿Cuántos caractéres tienen las palabras?</b></h1>
@@ -405,7 +560,18 @@ background-color: #9ed3ff;
 
         </div>
     </div>
-    <hr>
+
+    <div class="box">
+        <div class="box-sm red"></div>
+        <div class="box-sm orange"></div>
+        <div class="box-sm yellow "></div>
+        <div class="box-sm green "></div>
+        <div class="box-sm blue "></div>
+        <div class="box-sm purple"></div>
+    </div>
+    </div>
+    
+
     <div class=" justify-content-center bg-yu align-items-center sr g-2">
         <div class="col-4 margen-1" id="seccion11">
             <h1>Duplicar Elementos en un Array</h1>
@@ -424,7 +590,16 @@ background-color: #9ed3ff;
             <ul id="arrays" style="font-family: fantasy;font-size: 20px;"></ul></p>
         </div>
     </div>
-    <hr>
+    <div class="box">
+        <div class="box-sm red"></div>
+        <div class="box-sm orange"></div>
+        <div class="box-sm yellow "></div>
+        <div class="box-sm green "></div>
+        <div class="box-sm blue "></div>
+        <div class="box-sm purple"></div>
+    </div>
+    </div>
+    
     <div class="row justify-content-center align-items-center sr bg-red g-2">
         <div class="col-5 margen-3" id="seccion12">
             <h1>Mayúsculas a Minúsculas y Viceversa</h1>
@@ -437,8 +612,8 @@ background-color: #9ed3ff;
             
         </div>
         <div class="col">
-            <p>Palabras originales:</p>
-            <ul id="palabrasOriginales"></ul>
+            <p>Original:</p>
+            <ul style="font-family: fantasy; font-size: 20px;" id="palabrasOriginales"></ul>
         </div>
         <div class="col">
             <p>Palabras modificadas:</p>
@@ -474,13 +649,18 @@ background-color: #9ed3ff;
         <p class="m-0 text-center text-white margen-5">
 Copyright &copy; Romer Almeida 2023-2023</p></pre></div>
   <!-- Bootstrap JavaScript Libraries -->
-  
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    
+    <script src="https://unpkg.com/scrollreveal@4.3.3/dist/scrollreveal.min.js"></script>
+    <script src="ROMER_ALMEIDA.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
   </script>
 </body>
 
