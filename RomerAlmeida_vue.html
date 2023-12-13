@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+  <title>ROMERIN TALLER VUE</title>
+<head>
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    
+    <style>
+        .pinkBG {
+          background-color: lightpink;
+        }
+      </style>
+
+<style>
+    #ap > div {
+      width: 200px;
+      padding: 20px;
+      border: dashed black 3px;
+    }
+  </style>
+
+<style>
+    #Rom {
+      border: dashed black 1px;
+      width: 130px;
+      padding-left: 20px;
+      font-weight: bold;
+      background-color: lightgreen;
+    }
+  </style>
+  <style>
+    #Alm {
+      border: black dashed 1px;
+      width: 200px;
+      padding: 0 20px 20px 20px;
+    }
+    #Alm div {
+      padding: 20px;
+      background-color: rgb(129, 35, 35);
+      font-weight: bold;
+    }
+    </style>
+
+<style>
+    #ven > div {
+      display: inline-block;
+      border: dashed black 1px;
+      padding: 10px;
+      background-color: lightgreen;
+    }
+    #ven p {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  </style>
+
+<style>
+    #Prom {
+      border: dashed black 1px;
+      width: 350px;
+      padding: 10px;
+    }
+    #Prom img {
+      width: 100%;
+    }
+
+  </style>
+
+<style>
+    #Nat {
+      border: dashed black 1px;
+      width: 330px;
+      padding: 20px;
+      height: 250px;
+    }
+
+    #Nat > img {
+      float: right;
+      width: 55%;
+    }
+
+    li:hover {
+      cursor: pointer;
+      background-color: rgb(238, 120, 120);
+    }
+
+    #Nat > ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #Nat li {
+      padding: 6px;
+      border-radius: 10px;
+      width: 70px;
+
+    }
+  </style>
+
+<style>
+    #Rop {
+      border: dashed black 1px;
+      width: 350px;
+      padding: 10px;
+    }
+    #Rop img {
+      width: 100%;
+    }
+    #Rop button {
+      margin: 10px;
+      padding: 5px 10px;
+    }
+  </style>
+    <style>
+        #CoR {
+          border: black dashed 1px;
+          width: 300px;
+          padding: 20px;
+        }
+        #CoR > div {
+          width: 100%;
+          position: relative;
+          margin-top: 10px;
+          aspect-ratio: 1;
+          background-image: url("https://scontent.fpso2-1.fna.fbcdn.net/v/t1.6435-9/75241143_2446419065623170_415751769100910592_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=dd63ad&_nc_eui2=AeFf9EkjQ1jbCJ89g_eDJGPFqtKexO0ZDteq0p7E7RkO1-CVUyfaexvk_ZUtfYfxiuWr0T52aTWxAiRwiIY-qi3o&_nc_ohc=ml-FHovm56YAX8fUOiX&_nc_oc=AQlXxe3d7ecBxyS40C5B5ZYvhC8eHNs7erQLDZL-zWDAutcZP-XcmsdSceIG2kVohcE&_nc_ht=scontent.fpso2-1.fna&oh=00_AfCuYPn8kcqHfqJAPR9rVE1WnpAGhGsb6JwXwlU1lQBgBg&oe=65838E6D");
+          background-size: 100%;
+          background-position: 100%;
+          overflow: hidden;
+        }
+        #CoR span {
+          width: 100%; 
+          font-weight: bold;
+          font-family: 'Courier New', Courier, monospace;
+          transform-origin: 0 0;
+          position: absolute;
+          rotate: 10deg;
+          top: 170px; 
+          left: 83px; 
+        }
+        #CoR textarea {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      </style>
+      <style>
+        #adp {
+          border: black dashed 1px;
+          width: 200px;
+          padding: 20px;
+        }
+        #adp > img {
+          width: 100%;
+        }
+      </style>
+        <style>
+          #ajp {
+            border: black dashed 1px;
+            width: 200px;
+            padding: 0 20px 20px 20px;
+          }
+          #ajp > div {
+            width: 160px;
+            background-color: lightcoral;
+            padding: 20px;
+          }
+          #ajp span {
+            color: black;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+          }
+        </style>
+        <style>
+          form {
+            border: dashed black 1px;
+            width: 200px;
+            padding: 20px;
+          }
+        </style>
+<style>
+  #est {
+    border: dashed black 1px;
+    display: inline-block;
+    padding: 0 20px;
+  }
+  #est label, #app li {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #est input[type=radio] {
+    margin: 8px;
+  }
+  #est label:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    margin: 2px;
+    width: 17ch;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: rgb(211, 254, 211);
+  }
+  .impClass {
+    background-color: rgb(255, 202, 202);
+  }
+  #ulFound li {
+    text-decoration: line-through;
+    background-color: rgb(230,230,230);
+  }
+  form img {
+    width: 50px;
+  }
+  li img {
+    float: right;
+    height: 100%;
+  }
+  h4 {
+    margin: 0;
+  }
+</style>
+<style>
+  .impClass {
+    font-weight: bolder;
+  }
+  .yelClass {
+    background-color: rgb(255, 255, 139);
+  }
+  #est > div {
+    border: dashed black 1px;
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+  }
+</style>
+<style>
+  form {
+    border: dashed black 1px;
+    display: inline-block;
+    padding: 10px;
+  }
+  label {
+    padding: 5px;
+  }
+  label:hover {
+    cursor: pointer;
+    background-color: rgb(231, 38, 38);
+    border-radius: 5px;
+  }
+</style>
+<style>
+  #dap {
+    border: dashed black 1px;
+    width: 200px;
+    padding: 0 10px 10px 10px;
+  }
+  #dap > div {
+    width: 200px;
+    height: 50px;
+    border: solid black 1px;
+    background-color: lightgreen;
+  }
+  #dap > p {
+    font-size: large;
+    font-weight: bold;
+  }
+  .valid {
+    color: green;
+  }
+  .invalid {
+    color: red;
+  }
+</style>
+    <title>My first Vue.js</title>
+</head>
+<body>
+    <h1>Mi Romer Vue.js</h1>
+    
+   <div id="app">
+    {{message}} <br>
+    {{ message2 }}
+   </div>
+<br>
+   <div id="add">
+    <div v-bind:class="vueClass">Romer, Romer, Romer anda igual de agrandado que Venezuela sin venir a Clase</div>
+  </div>
+<br>
+  
+  <div id="ap">
+    <div v-bind:style="{ backgroundColor: isImportant ? 'lightcoral' : 'lightgray' }">ROMINEM</div>
+  </div>
+  <br>
+
+  <img src="https://scontent-bog2-1.xx.fbcdn.net/v/t39.30808-6/350315024_995618488515989_4257818343217164097_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeENiI6sTDCpeyYk8j9NU2_x3JapShRgHWfclqlKFGAdZ3qSmhJv7mvfudOlB3z6C8ZYLDNbrRhC0-v8EIzE-HP3&_nc_ohc=H_F9qAVWyF8AX_ple53&_nc_ht=scontent-bog2-1.xx&oh=00_AfB6HQJeCVeZ78c1X9snqipgsUIe2pWPV_SjDwQfFt8Uvg&oe=6560305A" alt="typewriter" width="215" height="155">
+
+  <div id="Rom">
+    <p v-if="typewriterCount>3">
+      En Narnia
+    </p>
+    <p v-else-if="typewriterCount>0">
+      Con Romer!
+    </p>
+    <p v-else>
+      Sin romer
+    </p>
+  </div><br>
+  <div id="Alm">
+    <p>Venezuela 3 - Chile 0
+        Venezuela 1 - Brasil 1
+        Venezuela 1 - Paraguay 0
+        Venezuela 0 - Ecuador 0
+        Venezuela 0 - Colombia 1
+    </p>
+    <div v-show="showDiv">Mano tengo fe <br> 8 puntos / +3  </div>
+  </div><br>
+  
+  <div id="ven">
+    <div>
+      <p v-for="(x, index) in manyFoods">
+        {{ index }}: "{{ x.name }}", resultado: "{{ x.url }}" <br>
+      </p>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="Prom">
+    <img src="https://scontent-bog2-1.xx.fbcdn.net/v/t39.30808-6/245368485_3016830578582013_352472466553476411_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHbpp9kW_PmJ0-5-Wn5YcMecE1h7Y5So0JwTWHtjlKjQtpOXidu5ZnXOHu6h3nay62yMfSjKWQS4Ky3ksxVLR4E&_nc_ohc=DTudYdm9oykAX_xD0Lj&_nc_ht=scontent-bog2-1.xx&oh=00_AfALZ8XIIB07A-pasDJjcz3fcKulyQML-bshzZqJiexM1w&oe=6561573A" width="770" height="549">
+    <p>{{ "Besos Count: " + count }}</p>
+    <button v-on:click="count++">Dale un Beso</button>
+  </div>
+  <br>
+
+  <div id="Nat">
+    <img v-bind:src="imgUrl">
+    <ol>
+      <li v-for="food in manyFoods" v-on:click="imgUrl = food.url">
+        {{ food.name }}
+      </li>
+    </ol>
+  </div>
+
+  <br>
+
+    <div id="Rop">
+        <img src="https://scontent.fpso2-1.fna.fbcdn.net/v/t39.30808-6/275242971_3121280324803704_9033554622989023174_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHZ2O57Ou2dupFTDa-riFhd0sKJ92VpbTPSwon3ZWltM-FpyNZJbsEWeY3F-kUUujUiWp9YFhjziCy9_EVpGwDG&_nc_ohc=bHOn5PnSrNkAX9G-Jvo&_nc_ht=scontent.fpso2-1.fna&oh=00_AfCKbYwGXMA5MRQBoX3YctgSgyeLV47IitJGy5P6VphPyg&oe=65604A22" width="770" height="549">
+
+        <p>{{ "Me gusta: " + count }}</p>
+        <button v-on:click="addMoose(1)">👍</button>
+    
+        <button v-on:click="addMoose(-1)">👎</button>
+      </div>
+
+      <div id="CoR">
+        <textarea v-on:input="writeText" rows="8" cols="30" placeholder="Start writing.."></textarea>
+        <div>
+          <span>{{ text }}</span>
+        </div>
+      </div>
+      <br>
+      <div id="adp">
+        <p>Presione la tecla 'Shift' del teclado mientras hace clic con el botón izquierdo del mouse en la imagen a continuación para cambiarla</p>
+        <img v-on:click.left.shift="changeImg" v-bind:src="imgUrl">
+      </div>
+      <br>
+      <div id="ajp">
+        <p>prsiona 'S' para general una alerta:</p>
+        <textarea cols="20" rows="3" v-on:keydown.s="createAlert" placeholder="Start writing.."></textarea>
+      </div>
+      <br>
+      <div id="nip">
+        <form v-on:submit.prevent="addItem">
+          <p>
+            que producto necesitas?
+            <input type="text" required placeholder="producto.." v-model="producto">
+          </p>
+          <p>
+            cuantos?
+            <input type="number" placeholder="cantidad.." v-model="cantidad">
+          </p>
+          <button type="submit">añadir al carrito</button>
+        </form>
+      
+        <div>
+          <p>lista de compras:</p>
+          <ul>
+            <li v-for="item in shoppingList">{{ item.name }}, {{ item.number}}</li>
+          </ul>
+          <br>
+          <div id="est">
+            <div v-bind:class="[{ impClass: isImportant }, 'yelClass' ]">
+              Esta etiqueta div pertenece a una o dos clases según la propiedad isImportant
+            </div>
+          </div>
+          <br><br>
+
+          <div id="maap">
+            <form>
+              <p>
+                item a importar
+                <label>
+                   <input type="checkbox" v-model="chbxVal"> 
+                   {{ isImportant }}
+                </label>
+              </p>
+            </form>
+          </div>
+          <br><br>
+          <div id="dap">
+            <label>
+              <p>Escriba una dirección de correo electrónico válida:</p>
+              <input type="email" v-model="inpAddress">
+            </label>
+            <p v-bind:class="myClass"><code>{{ feedbackText }}</code></p> 
+          </div>
+
+
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+   <script>
+
+    const app = Vue.createApp({
+      data() {
+        
+        return {
+          message: "Romer vue.js",
+          message2: "Numero Romer " + Math.ceil(Math.random()*6)
+        }
+      }
+    })
+  
+   app.mount('#app')
+  </script>
+
+  <script>
+   const add = Vue.createApp({
+      data() {
+        return {
+          vueClass: "pinkBG"
+        }
+      }
+    })
+    add.mount('#add')
+
+  </script>
+  <script>
+    const ap = Vue.createApp({
+     data() {
+      return {
+        isImportant: true
+      }
+     }
+    })
+    ap.mount('#ap')
+  </script>
+  <script>
+    const Rom = Vue.createApp({
+     data() {
+      return {
+        typewriterCount: 0
+      }
+     }
+    })
+    Rom.mount('#Rom')
+  </script>
+
+  <script>
+    const Alm = Vue.createApp({
+      data() {
+        return {
+          showDiv: true
+        }
+      }
+    })
+   Alm.mount('#Alm')
+  </script>
+
+  <script>
+    const ven = Vue.createApp({
+     data() {
+      return {
+        manyFoods: [
+          {name: 'Fecha 1', url: 'Col 1 - Ven 0'},
+          {name: 'Fecha 2', url: 'Ven 1 - Par 0'},
+          {name: 'Fecha 3', url: 'Bra 1 - Ven 1'},
+          {name: 'Fecha 4', url: 'Ven 3 - Chi 0'},
+          {name: 'Fecha 5', url: 'Ven 0 - Ecu 0'},
+
+        ]
+      }
+     }
+    })
+    ven.mount('#ven')
+  </script>
+
+<script>
+    const Prom = Vue.createApp({
+      data() {
+        return {
+          count: 0
+        }
+      }
+    })
+   Prom.mount('#Prom')
+  </script>
+
+<script>
+    const Nat = Vue.createApp({
+      data() {
+        return {
+          imgUrl: 'https://scontent.fpso2-1.fna.fbcdn.net/v/t39.30808-6/298413031_3239256476339421_3019292708945131405_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFvAqmxXGALGyt6pL40jGIPFllJcMcDm0kWWUlwxwObSYw63W1-MUld4IYpXPZcsnlYcU07Okqo3db2cHsQjiqq&_nc_ohc=4Wz9meMimZgAX8VfLVw&_nc_ht=scontent.fpso2-1.fna&oh=00_AfDTAQ6uvV3Mnd9AqsH_HaLHQZnV7IN9vdj5m4PKVNJvGQ&oe=6561439E',
+          manyFoods: [
+            {name: 'Romer Chiquito', url: 'https://scontent.fpso2-1.fna.fbcdn.net/v/t1.18169-9/11078241_1580834898848262_779739691279683428_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeG4_1Gogpn3TxOz2qBRyggwCnv9mOW1o0cKe_2Y5bWjR725GnoFPGpM9_R-hEG2JHBzW8Ww5b5KurmPnp5vhEEd&_nc_ohc=waOYYMbdiasAX90auJg&_nc_ht=scontent.fpso2-1.fna&oh=00_AfC3ECq5idumE4jzOrI-rDahqQYh9N7a5U7mNIyEeA5G4Q&oe=6583714A'},
+            
+            {name: 'Romer Mediano', url: 'https://scontent.fpso2-1.fna.fbcdn.net/v/t1.6435-9/71673840_2972456182784088_7427077896029601792_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeFBV0duhKOFEN6BFpzmqd2PBF6h31KNvCgEXqHfUo28KENzvj45odJZLSm9c51o4WUztUovw0hWa_Z8DO3P0t5i&_nc_ohc=GN8bkd66XiUAX9IQTEY&_nc_ht=scontent.fpso2-1.fna&oh=00_AfCLLb4pfWIG0tan43E3cgQiFLWdGsij6L761GVDl1-v-g&oe=65836FBE'},
+
+            {name: 'Romer Grande', url: 'https://scontent.fpso2-1.fna.fbcdn.net/v/t39.30808-6/232207738_2969929846605420_4802713781638206635_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHIC7mbaAPhEGKA7rVeDwCEGPvBsgQeshAY-8GyBB6yEJ2qOXTfLnv9cX8luSCtLieSvW6NjLTeauIU1cyMK1fE&_nc_ohc=Sn2T4kA56hAAX_VJ4AP&_nc_ht=scontent.fpso2-1.fna&oh=00_AfDt8AAIx_VxOAtwTX3Bk7KGcazzDlwbGKov6nyBCcEytA&oe=656058FD'},
+
+            
+        ]
+        }
+      }
+    })
+   Nat.mount('#Nat')
+  </script>
+
+  <script>
+    const Rop = Vue.createApp({
+      data() {
+        return {
+          count: 0
+        }
+      },
+      methods: {
+        addMoose(number) {
+          this.count+=number
+          /* the same as this.count=this.count+number */
+        }
+      }
+    })
+   Rop.mount('#Rop')
+  </script>
+
+<script>
+    const CoR = Vue.createApp({
+      data() {
+        return {
+          text: ''
+        }
+      },
+      methods: {
+        writeText(event) {
+          this.text = event.target.value
+        }
+      }
+    })
+   CoR.mount('#CoR')
+  </script>
+  <script>
+    const adp = Vue.createApp({
+      data() {
+        return {
+          imgUrlIndex : 0,
+          imgUrl: 'img_tiger_square.jpeg',
+          images: [
+            'img_tiger_square.jpeg',
+            'img_moose_square.jpeg',
+            'img_kangaroo_square.jpeg'
+          ]
+        }
+      },
+      methods: {
+        changeImg() {
+          this.imgUrlIndex++;
+          if(this.imgUrlIndex>=3){
+            this.imgUrlIndex=0
+          }
+          this.imgUrl = this.images[this.imgUrlIndex]
+        }
+      }
+    })
+   adp.mount('#adp')
+  </script>
+  <script>
+    const ajp = Vue.createApp({
+      methods: {
+        createAlert(evt) {
+          alert("has presionado la tecla s");
+        }
+      }
+    })
+   ajp.mount('#ajp')
+  </script>
+  <script>
+    const nip = Vue.createApp({
+      data() {
+        return {
+          itemName: null,
+          itemNumber: null,
+          shoppingList: [
+            { name: 'Tomatoes', number: 5 }
+          ]
+        }
+      },
+      methods: {
+        addItem(){
+          let item = {
+            name: this.producto,
+            number: this.cantidad
+          }
+          this.shoppingList.push(item)
+          this.producto = null
+          this.cantidad = null  
+        }
+      }
+    })
+   nip.mount('#nip')
+  </script>
+  <script>
+    const est = Vue.createApp({
+      data() {
+        return {
+          isImportant: false
+        }
+      }
+    })
+   est.mount('#est')
+  </script>
+  <script>
+    const maap = Vue.createApp({
+      data() {
+        return {
+          chbxVal: false
+        }
+      },
+      computed: {
+        isImportant() {
+          if(this.chbxVal){
+            return 'yes'
+          }
+          else {
+            return 'no'
+          }
+        }
+      } //problemas aqui
+    })
+   maap.mount('#maap')
+  </script>
+  <script>
+    const dap = Vue.createApp({
+      data() {
+        return {
+          inpAddress: '',
+          feedbackText: '',
+          myClass: 'invalid'
+        }
+      },
+      watch: {
+        inpAddress(newVal,oldVal) {
+          if(!newVal.includes('@')){
+            this.feedbackText = 'The e-mail address is NOT valid';
+            this.myClass = 'invalid';
+          }
+          else if(!oldVal.includes('@') && newVal.includes('@')) {
+            this.feedbackText = 'Perfect! You fixed it!';
+            this.myClass = 'valid'
+          }
+          else {
+            this.feedbackText = 'The e-mail address is valid :)';
+          }
+        }
+      }
+    })
+   dap.mount('#dap')
+  </script>
+
+</body>
+
+</html>
